@@ -3,8 +3,6 @@
 let game = document.querySelector('.game');
 let gameHeading = document.querySelector('.heading')
 
-setTimeout(() => { game.classList.add('active2') }, 100)
-
 let randomNumber = Math.floor((Math.random() * 100) + 1);
 
 let input = document.querySelector('.inp');
@@ -49,7 +47,6 @@ function gameRules() {
                 result.innerHTML = 'Winner, winner, chicken dinner!';
                 result.classList.add('result-active1')
 
-
             }, 100)
 
 
@@ -68,7 +65,7 @@ function gameRules() {
 
                 }
 
-            }, 1500)
+            }, 3000)
 
         }
 
@@ -114,7 +111,7 @@ function gameRules() {
                 if (confirm(`YOU ARE LOST!! The secret number was ${randomNumber}\n  Do you wanna play again?`) == true) {
 
                     location.reload()
-
+                 
                 }
 
                 else {
@@ -123,7 +120,7 @@ function gameRules() {
                 }
 
 
-            }, 1000)
+            }, 3000)
 
         }
 
@@ -138,8 +135,10 @@ function gameRules() {
 
 btn.addEventListener('click', () => {
 
-    gameRules()
+    setTimeout(() => { game.classList.add('active2') }, 200)
 
+    setTimeout(() => { input.classList.add('input-active') },200)
+    btn.disabled = true;
 })
 
 document.addEventListener('keypress', (event) => {
