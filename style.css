@@ -17,9 +17,8 @@ body {
 
     border-radius: 20px;
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     width: 25rem;
     height: 35rem;
     text-align: center;
@@ -34,7 +33,7 @@ body {
 .game-container {
 
     display: grid;
-    gap: 2rem;
+    gap: 1rem;
     padding: 1rem;
 }
 

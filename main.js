@@ -21,7 +21,7 @@ console.log(randomNumber)
 let count = 5;
 
 
-btn.addEventListener('click', () => {
+function gameRules() {
 
     if (isNaN(input.value)) { alert('Please enter only Numbers !!!') }
 
@@ -131,7 +131,25 @@ btn.addEventListener('click', () => {
 
     input.value = ""
 
+
+
+}
+
+
+btn.addEventListener('click', () => {
+
+    gameRules()
+
 })
 
+document.addEventListener('keypress', (event) => {
+
+    if (event.key === 'Enter') {
+
+        gameRules()
+
+    }
+
+})
 
 
